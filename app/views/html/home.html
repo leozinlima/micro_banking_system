@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Declaração do tipo de documento HTML5 -->
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres para UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura o viewport para garantir a responsividade em dispositivos móveis -->
+    <link rel="icon" type="image/png" href="../../static/image/favicon.png">
+    <!-- Define o ícone exibido na aba do navegador -->
+    <title>Home</title>
+    <!-- Define o título da página exibido na aba do navegador -->
+    <link rel="stylesheet" href="../../static/css/style.css">
+    <!-- Inclui o arquivo CSS externo para estilização da página -->
+</head>
+<body class="home">
+    <!-- Início do corpo da página com a classe "home" para estilização específica -->
+    <div class="container">
+        <!-- Contêiner principal que centraliza todo o conteúdo da página -->
+        <header>
+            <!-- Cabeçalho da página, contendo o logo e o botão de logout -->
+            <img src="../../static/image/logo.png" alt="Logo" class="logo">
+            <!-- Imagem do logotipo, com a classe "logo" para estilização -->
+            <div class="config">
+                <!-- Div que contém o botão de configurações -->
+                <a>
+                    <img src="../../static/image/config.png" alt="Configurações" id="configBtn" class="config-icon">
+                    <!-- Imagem do ícone de configurações com um ID e classe para estilização e funcionalidade -->
+                </a>
+            </div>
+            <div class="logout">
+                <!-- Div que contém o botão de logout -->
+                <a>
+                    <img src="../../static/image/logout.png" alt="Logout" id="logoutBtn" class="logout-icon">
+                    <!-- Imagem do ícone de logout com um ID e classe para estilização e funcionalidade -->
+                </a>
+            </div>
+        </header>
+        <main>
+            <!-- Conteúdo principal da página -->
+            <div class="account-info">
+                <!-- Seção para exibir as informações da conta do usuário -->
+                <div class="account-details">
+                    <!-- Detalhes da conta do usuário, incluindo nome e ID da conta -->
+                    <p><strong>{{current_user.first_name}} {{current_user.last_name}}</strong></p>
+                    <!-- Exibe o nome completo do usuário -->
+                    <p><strong>{{current_user.bank_account_id}}</strong></p>
+                    <!-- Exibe o ID da conta bancária do usuário -->
+                </div>
+                <p class="balance"><strong>R$ {{ "{:,.2f}".format(current_user.balance).replace(',', 'X').replace('.', ',').replace('X', '.') }}</strong></p>
+                <!-- Exibe o saldo do usuário formatado em reais, com duas casas decimais e separadores de milhar -->
+            </div>
+            <div class="buttons-container">
+                <!-- Contêiner para os botões de navegação da página -->
+                <button type="button" id="depositPageBtn">DEPÓSITO</button>
+                <!-- Botão para redirecionar para a página de depósito -->
+                <button type="button" id="withdrawPageBtn">SAQUE</button>
+                <!-- Botão para redirecionar para a página de saque -->
+                <button type="button" id="transferPageBtn">TRANSFERÊNCIA</button>
+                <!-- Botão para redirecionar para a página de transferência -->
+            </div>
+        </main>
+    </div>
+    <script src="../../static/js/script.js"></script>
+    <!-- Inclusão de um arquivo JavaScript externo para funcionalidades adicionais -->
+</body>
+</html>

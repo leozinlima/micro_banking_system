@@ -1,0 +1,512 @@
+body {
+    /* Define a fonte padrão do corpo do documento e remove margens e espaçamentos */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+    /* Centraliza o conteúdo no meio da tela, tanto horizontal quanto verticalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Define a altura total da viewport e a cor de fundo */
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    /* Define o fundo branco, borda cinza clara e sombra suave para o contêiner principal */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.index .container,
+.home .container,
+.saque .container,
+.deposito .container,
+.transferencia .container {
+    /* Define a largura dos contêineres em diferentes seções */
+    width: 80%;
+}
+
+.home .container,
+.saque .container,
+.deposito .container,
+.transferencia .container {
+    /* Define a largura máxima para contêineres em diferentes seções */
+    max-width: 800px;
+}
+
+.index .container {
+    /* Define a largura máxima para o contêiner na página de índice */
+    max-width: 1200px;
+}
+
+.register .container,
+.settings .container {
+    /* Define a largura e a largura máxima para o contêiner na página de registro */
+    width: 50%;
+    max-width: 600px;
+}
+
+header {
+    /* Define o layout do cabeçalho, centralizando o conteúdo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+
+.logout {
+    /* Define a posição do botão de logout no cabeçalho */
+    right: 20px;
+    position: absolute;
+}
+
+.config {
+    /* Define a posição do botão de configurações no cabeçalho */
+    right: 70px;
+    position: absolute;
+}
+
+.logo {
+    /* Define o tamanho máximo e a altura automática da logo para manter a proporção */
+    max-width: 10%;
+    height: auto;
+}
+
+.logout-icon,
+.home-icon,
+.return-icon,
+.config-icon {
+    /* Define o tamanho e o comportamento ao passar o mouse sobre os ícones */
+    width: 30px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.logout-icon:hover,
+.home-icon:hover,
+.return-icon:hover,
+.config-icon:hover {
+    /* Aumenta levemente o tamanho dos ícones ao passar o mouse */
+    transform: scale(1.1);
+}
+
+.home-icon,
+.return-icon {
+    /* Posiciona os ícones à esquerda no cabeçalho */
+    position: absolute;
+    left: 20px;
+}
+
+header h1 {
+    /* Remove a margem e centraliza o texto no cabeçalho */
+    margin: 0;
+    text-align: center;
+}
+
+.index header h1,
+.register header h1,
+.settings header h1, 
+.home header h1 {
+    /* Define a largura, preenchimento e cor do título nas páginas de índice, registro e home */
+    width: 100%;
+    padding-top: 10px;
+    color: #666;
+}
+
+.home header h1,
+.saque header h1,
+.deposito header h1,
+.transferencia header h1 {
+    /* Permite que o título no cabeçalho cresça para ocupar o espaço disponível */
+    flex-grow: 1;
+}
+
+.register main,
+.settings main,
+.home main,
+.saque main,
+.deposito main,
+.transferencia main {
+    /* Define o espaçamento interno para o conteúdo principal */
+    padding: 20px;
+}
+
+.home main,
+.saque main,
+.deposito main,
+.transferencia main  {
+    /* Centraliza o texto nas seções principais */
+    text-align: center;
+}
+
+.index main {
+    /* Define o layout flexível para a página de índice */
+    display: flex;
+}
+
+.image-section {
+    /* Define as propriedades de layout e borda para a seção de imagem */
+    width: 70%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #ccc;
+    overflow: hidden;
+}
+
+.informative-image {
+    /* Ajusta a imagem dentro da seção, mantendo a proporção e preenchendo o espaço */
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.image-section {
+    /* Configurações adicionais para a seção de imagem, como sombra e borda arredondada */
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.text-overlay {
+    /* Centraliza o texto sobreposto e ajusta seu estilo */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    color: #333;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+}
+
+.image-title {
+    /* Define o estilo do título da imagem */
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #2c3e50;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.image-subtitle {
+    /* Define o estilo do subtítulo da imagem */
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #34495e;
+    font-weight: 600;
+}
+
+.image-description {
+    /* Define o estilo da descrição da imagem */
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.informative-image {
+    /* Garante que a imagem ocupe todo o espaço disponível e mantenha a proporção */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+.login-section {
+    /* Define o layout e o espaçamento para a seção de login */
+    width: 30%;
+    padding: 20px;
+}
+
+.login-section h2 {
+    /* Centraliza o título na seção de login */
+    text-align: center;
+}
+
+.login-section form {
+    /* Define a orientação do formulário de login */
+    display: flex;
+    flex-direction: column;
+}
+
+.login-section label {
+    /* Define o estilo dos rótulos no formulário de login */
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.login-section input {
+    /* Define o estilo dos campos de entrada no formulário de login */
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-section button {
+    /* Define o estilo dos botões na seção de login */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+.login-section button:hover {
+    /* Altera a cor de fundo ao passar o mouse sobre o botão */
+    background-color: #0056b3;
+}
+
+.withdraw-info {
+    /* Define o estilo para a seção de informações de saque */
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.withdraw-info h2 {
+    /* Define o estilo do título na seção de informações de saque */
+    margin-bottom: 20px;
+}
+
+.withdraw-info p {
+    /* Define o estilo dos parágrafos na seção de informações de saque */
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.withdraw-info span {
+    /* Define o estilo dos spans na seção de informações de saque */
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.withdraw-info input[type="number"] {
+    /* Define o estilo dos campos numéricos na seção de informações de saque */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 150px;
+}
+
+.account-info {
+    /* Define o layout e o estilo para a seção de informações da conta */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.account-info .account-details {
+    /* Define a parte da seção de informações da conta que mostra os detalhes */
+    flex-basis: 60%;
+    text-align: left;
+}
+
+.account-info .balance {
+    /* Define a parte da seção de informações da conta que mostra o saldo */
+    font-size: 32px;
+    flex-basis: 40%;
+    text-align: right;
+}
+
+.account-details p {
+    /* Remove a margem dos parágrafos na seção de detalhes da conta */
+    margin: 0;
+}
+
+.deposit-info {
+    /* Define o estilo para a seção de informações de depósito */
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.deposit-info h2 {
+    /* Define o estilo do título na seção de informações de depósito */
+    margin-bottom: 20px;
+}
+
+.deposit-info p {
+    /* Define o estilo dos parágrafos na seção de informações de depósito */
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.deposit-info span {
+    /* Define o estilo dos spans na seção de informações de depósito */
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.deposit-info input[type="number"] {
+    /* Define o estilo dos campos numéricos na seção de informações de depósito */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 150px;
+}
+
+.transfer-info {
+    /* Define o estilo para a seção de informações de transferência */
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.transfer-info h2 {
+    /* Define o estilo do título na seção de informações de transferência */
+    margin-bottom: 20px;
+}
+
+.transfer-info p {
+    /* Define o estilo dos parágrafos na seção de informações de transferência */
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.transfer-info span {
+    /* Define o estilo dos spans na seção de informações de transferência */
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.transfer-info input[type="text"],
+.transfer-info input[type="number"] {
+    /* Define o estilo dos campos de texto e numéricos na seção de informações de transferência */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.form-container {
+    /* Define o estilo do contêiner de formulários */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.settings .form-container {
+    /* Define o espaçamento inferior adicional para o contêiner de formulários na página de configurações */
+    margin-bottom: 20px;
+}
+
+.form-group {
+    /* Define o layout de grupo de formulários */
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    /* Define o estilo dos rótulos em grupos de formulários */
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    /* Define o estilo dos campos de entrada em grupos de formulários */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    /* Estilos gerais para todos os botões */
+    background-color: #007BFF; /* Azul padrão */
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.settings .btn-danger {
+    /* Define o estilo específico para o botão de perigo na página de configurações */
+    background-color: #FF4A4A;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+}
+
+button:hover {
+    /* Altera a cor de fundo ao passar o mouse sobre o botão */
+    background-color: #0056b3;
+}
+
+.settings .btn-danger:hover {
+    /* Altera a cor de fundo ao passar o mouse sobre o botão de perigo na página de configurações */
+    background-color: #D93737;
+}
+
+.buttons-container button {
+    /* Estilos específicos para botões dentro de .buttons-container */
+    width: 30%;
+    border: 1px solid #ccc;
+}
+
+.index .buttons-container button,
+.home .buttons-container button {
+    /* Estilos específicos para botões nas páginas de índice, registro e home */
+    padding: 15px;
+    font-size: 16px;
+}
+
+.saque .buttons-container button,
+.deposito .buttons-container button,
+.transferencia .buttons-container button {
+    /* Estilos específicos para botões nas páginas de saque, depósito e transferência */
+    padding: 10px 20px;
+    margin: 0 10px;
+}
+
+.index .buttons-container,
+.register .buttons-container,
+.home .buttons-container {
+    /* Layout dos contêineres de botões nas páginas de índice, registro e home */
+    display: flex;
+    justify-content: space-between;
+}
+
+.saque .buttons-container,
+.deposito .buttons-container,
+.transferencia .buttons-container {
+    /* Layout dos contêineres de botões nas páginas de saque, depósito e transferência */
+    margin-top: 20px;
+}
+
+.register button,
+.settings .btn-primary {
+    /* Estilo específico para o botão dentro de .register */
+    margin-top: 20px;
+    border: none;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Declaração do tipo de documento HTML5 -->
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres para UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura o viewport para garantir a responsividade em dispositivos móveis -->
+    <link rel="icon" type="image/png" href="../../static/image/favicon.png">
+    <!-- Define o ícone exibido na aba do navegador -->
+    <title>Saque</title>
+    <!-- Define o título da página exibido na aba do navegador -->
+    <link rel="stylesheet" href="../../static/css/style.css">
+    <!-- Inclui o arquivo CSS externo para estilização da página -->
+</head>
+<body class="saque">
+    <!-- Início do corpo da página com a classe "saque" para estilização específica -->
+    <div class="container">
+        <!-- Contêiner principal que centraliza todo o conteúdo da página -->
+        <header>
+            <!-- Cabeçalho da página, contendo ícones de home e logout, além do logotipo -->
+            <div class="home-icon">
+                <!-- Ícone de retorno para a página inicial -->
+                <a>
+                    <img src="../../static/image/home.png" alt="Home" width="30">
+                    <!-- Imagem do ícone de home, sem funcionalidade definida -->
+                </a>
+            </div>
+            <img src="../../static/image/logo.png" alt="Logo" class="logo">
+            <!-- Imagem do logotipo, com a classe "logo" para estilização -->
+            <div class="config">
+                <!-- Div que contém o botão de configurações -->
+                <a>
+                    <img src="../../static/image/config.png" alt="Configurações" id="configBtn" class="config-icon">
+                    <!-- Imagem do ícone de configurações com um ID e classe para estilização e funcionalidade -->
+                </a>
+            </div>
+            <div class="logout">
+                <!-- Div que contém o botão de logout -->
+                <a>
+                    <img src="../../static/image/logout.png" alt="Logout" id="logoutBtn" class="logout-icon">
+                    <!-- Imagem do ícone de logout com um ID e classe para estilização e funcionalidade -->
+                </a>
+            </div>
+        </header>
+        <main>
+            <!-- Conteúdo principal da página -->
+            <div class="withdraw-info">
+                <!-- Seção para exibir as informações e o formulário de saque -->
+                <h2>SAQUE</h2>
+                <!-- Título da seção de saque -->
+                <form id="withdrawForm">
+                <!-- Envolva o conteúdo em um formulário -->
+                    <p><strong>NÚMERO DA Cta.</strong> <span>{{bank_account_id}}</span></p>
+                    <!-- Exibe o número da conta bancária do usuário usando a variável 'bank_account_id' -->
+                    <p>Digite o valor do saque: R$ <input type="number" id="withdrawValue" min="0.01" step="0.01"></p>
+                    <!-- Campo de entrada para o valor do saque, com valor mínimo e incremento de centavos -->
+                    <div class="buttons-container">
+                        <!-- Contêiner para os botões de limpar e sacar -->
+                        <button type="button" id="clearBtn">LIMPAR</button>
+                        <!-- Botão para limpar o campo de valor do saque -->
+                        <button type="submit" id="withdrawBtn">SACAR</button>
+                        <!-- Botão para submeter o saque -->
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="../../static/js/script.js"></script>
+    <!-- Inclusão de um arquivo JavaScript externo para funcionalidades adicionais -->
+</body>
+</html>

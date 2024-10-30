@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Declaração do tipo de documento HTML5 -->
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres para UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura o viewport para garantir a responsividade em dispositivos móveis -->
+    <link rel="icon" type="image/png" href="../../static/image/favicon.png">
+    <!-- Define o ícone exibido na aba do navegador -->
+    <title>Registro</title>
+    <!-- Define o título da página exibido na aba do navegador -->
+    <link rel="stylesheet" href="../../static/css/style.css">
+    <!-- Inclui o arquivo CSS externo para estilização da página -->
+</head>
+<body class="register">
+    <!-- Início do corpo da página com a classe "register" para estilização específica -->
+    <div class="container">
+        <!-- Contêiner principal que centraliza todo o conteúdo da página -->
+        <header>
+            <!-- Cabeçalho da página, contendo o ícone de retorno e o título -->
+            <div class="return-icon">
+                <!-- Ícone de retorno para a página anterior -->
+                <a>
+                    <img src="../../static/image/return.png" alt="Return" width="30">
+                    <!-- Imagem do ícone de retorno, sem funcionalidade definida -->
+                </a>
+            </div>
+            <h1>REGISTRO</h1>
+            <!-- Título da página de registro -->
+        </header>
+        <main>
+            <!-- Conteúdo principal da página -->
+            <div class="form-container">
+                <!-- Contêiner para o formulário de registro -->
+                <form id="registerForm" method="POST" action="/register">
+                    <!-- Formulário de registro, configurado para enviar dados via método POST -->
+                    <div class="form-group">
+                        <!-- Grupo de campos de entrada para nome e sobrenome -->
+                        <label for="firstName">Nome</label>
+                        <!-- Rótulo para o campo de entrada de nome -->
+                        <input type="text" id="firstName" name="firstName" required>
+                        <!-- Campo de entrada para o nome, obrigatório -->
+                        
+                        <label for="lastName">Sobrenome</label>
+                        <!-- Rótulo para o campo de entrada de sobrenome -->
+                        <input type="text" id="lastName" name="lastName" required>
+                        <!-- Campo de entrada para o sobrenome, obrigatório -->
+                    </div>
+
+                    <div class="form-group">
+                        <!-- Grupo de campos de entrada para o email -->
+                        <label for="registerEmail">Email</label>
+                        <!-- Rótulo para o campo de entrada de email -->
+                        <input type="email" id="registerEmail" name="registerEmail" required>
+                        <!-- Campo de entrada para o email, obrigatório -->
+                    </div>
+
+                    <div class="form-group">
+                        <!-- Grupo de campos de entrada para senha e confirmação de senha -->
+                        <label for="registerPassword">Senha</label>
+                        <!-- Rótulo para o campo de entrada de senha -->
+                        <input type="password" id="registerPassword" name="registerPassword" required>
+                        <!-- Campo de entrada para a senha, obrigatório -->
+                        
+                        <label for="registerConfirmPassword">Confirme sua senha</label>
+                        <!-- Rótulo para o campo de confirmação de senha -->
+                        <input type="password" id="registerConfirmPassword" name="registerConfirmPassword" required>
+                        <!-- Campo de confirmação de senha, obrigatório -->
+                    </div>
+
+                    <div class="form-group">
+                        <!-- Grupo de campo de entrada para data de nascimento -->
+                        <label for="registerDob">Data de nascimento</label>
+                        <!-- Rótulo para o campo de entrada de data de nascimento -->
+                        <input type="date" id="registerDob" name="registerDob" required>
+                        <!-- Campo de entrada para a data de nascimento, obrigatório -->
+                    </div>
+
+                    <button type="submit">Avançar</button>
+                    <!-- Botão para submeter o formulário de registro -->
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="../../static/js/script.js"></script>
+    <!-- Inclusão de um arquivo JavaScript externo para funcionalidades adicionais -->
+</body>
+</html>

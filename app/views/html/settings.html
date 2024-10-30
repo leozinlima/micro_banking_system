@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura a página para ser responsiva -->
+    <link rel="icon" type="image/png" href="../../static/image/favicon.png">
+    <!-- Define o ícone exibido na aba do navegador -->
+    <title>Configurações</title>
+    <!-- Define o título da página -->
+    <link rel="stylesheet" href="../../static/css/style.css">
+    <!-- Link para o arquivo CSS externo -->
+</head>
+<body class="settings">
+    <!-- Define a classe 'settings' no body para estilização específica da página -->
+    <div class="container">
+        <!-- Contêiner para agrupar o conteúdo -->
+        <header>
+            <!-- Cabeçalho da página -->
+            <div class="home-icon">
+                <!-- Div que contém o ícone de retorno para a página inicial -->
+                <a>
+                    <img src="../../static/image/home.png" alt="Home" width="30">
+                    <!-- Imagem do ícone de home, sem funcionalidade definida -->
+                </a>
+            </div>
+            <h1>CONFIGURAÇÕES</h1>
+            <!-- Título da página -->
+            <div class="logout">
+                <!-- Div que contém o botão de logout -->
+                <a>
+                    <img src="../../static/image/logout.png" alt="Logout" id="logoutBtn" class="logout-icon">
+                    <!-- Imagem do ícone de logout com um ID e classe para estilização e funcionalidade -->
+                </a>
+            </div>
+        </header>
+        <main>
+            <!-- Conteúdo principal da página -->
+            <div class="form-container">
+                <!-- Contêiner para o formulário de perfil -->
+                <form id="profileForm">
+                    <!-- Formulário para alteração de dados do perfil do usuário -->
+                    <div class="form-group">
+                        <!-- Grupo de campos do formulário -->
+                        <label for="firstName">Nome</label>
+                        <input type="text" id="firstName" name="firstName" value="{{user.first_name}}" required>
+                        <!-- Campo de entrada para o nome do usuário, pré-preenchido com o valor armazenado -->
+
+                        <label for="lastName">Sobrenome</label>
+                        <input type="text" id="lastName" name="lastName" value="{{user.last_name}}" required>
+                        <!-- Campo de entrada para o sobrenome do usuário, pré-preenchido com o valor armazenado -->
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" value="{{user.username}}" required>
+                        <!-- Campo de entrada para o email do usuário, pré-preenchido com o valor armazenado -->
+
+                        <label for="dob">Data de nascimento</label>
+                        <input type="date" id="dob" name="dob" value="{{user.dob}}" required>
+                        <!-- Campo de entrada para a data de nascimento do usuário, pré-preenchido com o valor armazenado -->
+                    </div>
+                    <button type="submit" id="updateProfileBtn" class="btn-primary">Alterar Perfil</button>
+                    <!-- Botão para submeter as alterações de perfil -->
+                </form>
+            </div>
+
+            <div class="form-container">
+                <!-- Contêiner para o formulário de alteração de senha -->
+                <form id="passwordForm">
+                    <!-- Formulário para alteração de senha -->
+                    <div class="form-group">
+                        <!-- Grupo de campos do formulário -->
+                        <label for="currentPassword">Senha Atual</label>
+                        <input type="password" id="currentPassword" name="currentPassword" required>
+                        <!-- Campo de entrada para a senha atual -->
+
+                        <label for="newPassword">Nova Senha</label>
+                        <input type="password" id="newPassword" name="newPassword" required>
+                        <!-- Campo de entrada para a nova senha -->
+
+                        <label for="confirmPassword">Confirme sua senha</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                        <!-- Campo de entrada para confirmar a nova senha -->
+                    </div>
+                    <button type="submit" id="updatePasswordBtn" class="btn-primary">Alterar Senha</button>
+                    <!-- Botão para submeter a alteração de senha -->
+                </form>
+            </div>
+
+            <div class="form-container">
+                <!-- Contêiner para o botão de deletar conta -->
+                <button type="button" class="btn-danger" id="deleteAccountBtn">Deletar Conta</button>
+                <!-- Botão para deletar a conta do usuário -->
+            </div>
+        </main>
+    </div>
+    <script src="../../static/js/script.js"></script>
+    <!-- Link para o arquivo JavaScript que adiciona funcionalidades -->
+</body>
+</html>
